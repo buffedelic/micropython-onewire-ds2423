@@ -1,5 +1,6 @@
 # Micropython OneWire DS2423
-### Description
+
+## Description
 
 Lightweight driver for the 1wire counter ds2423 from Maxim Integrated
 Designed to work with the micropython driver for onewire.
@@ -10,10 +11,14 @@ Designed to work with the micropython driver for onewire.
 * Tested on ESP8266
 * Pull-up resistor is required on data bus, 1kohm to 3.3v is a good starting point
 
+### Applications
+
+* Masuring power, water, gas meters
+* Count chickes with a low powered device
+
 ### Example Usage
 
 ```
-
 import ds2423
 import onewire
 
@@ -22,5 +27,4 @@ ow = onewire.OneWire(Pin(0))
 counter = ds2423.DS2423(ow)
 counter.begin(bytearray(b'\x1dl\xec\x0c\x00\x00\x00\x94'))
 print(counter.get_count("DS2423_COUNTER_A"))
-
 ```
