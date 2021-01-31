@@ -1,5 +1,4 @@
-# Heru FTX Modbus
-
+# Micropython OneWire DS2423
 ### Description
 
 Lightweight driver for the 1wire counter ds2423 from Maxim Integrated
